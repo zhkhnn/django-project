@@ -1,0 +1,1047 @@
+{% load static %}
+<style>
+    body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.site-btn{
+    display: inline-block;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    min-width: 167px;
+    padding: 14px 30px;
+    border-radius: 50px;
+    color: white;
+    line-height: normal;
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: 1px;
+    background: linear-gradient(to right, #bf9bda, #DEE2FF);
+}
+
+.site-btn.sb-gradient{
+    color: white;
+    padding: 13px 29px;
+    position: relative;
+    transition: all 0.4s;
+    z-index: 1;
+}
+.site-btn.sb-gradient:hover{
+    color: #272838;
+}
+
+#topbar{
+    background-color: white;
+    padding: 10px 0;
+    border-bottom: 1px solid  #000;
+    font-size: 15px;
+}
+#topbar .contact-info a{
+     line-height: 1;
+     color: #444;
+     transition: 0.3s;
+}
+#topbar .contact-info a:hover{
+    color: #8E9AAF;
+}
+#topbar .contact-info i{
+    color: #8E9AAF;
+    padding: 4px;
+}
+
+#topbar .social-links a{
+    color: #8E9AAF;
+    padding: 4px 12px;
+    display: inline-block;
+    line-height: 1;
+    transition: 0.3s;
+    border-left: 1px solid #272838;
+}
+#topbar .social-links a:hover{
+    color: #8E9AAF;
+}
+#topbar .social-links a:first-child{
+    border-left: 0;
+
+}
+.bg-color{
+    background: #CBC0D3;
+}
+.nav-item a:hover{
+    color: #FEEAFA;
+    font-weight: bold;
+}
+.nav-link{
+    color: black;
+
+}
+
+.slide-1, .slide-2, .slide-3{
+    min-height: 80vh;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 82%);
+}
+.slide-1{
+    background:  url(https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8eW9nYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60) center /cover fixed no-repeat, linear-gradient(to right, rgba(203, 192, 211, 1), rgba(222, 226, 255, 1));
+}
+.slide-2{
+    background:  url(https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8eW9nYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60) center /cover fixed no-repeat, linear-gradient(to right, rgba(254, 234, 250, 1), rgba(222, 226, 255, 1));
+}
+.slide-3{
+    background:  url(https://images.unsplash.com/photo-1588286840104-8957b019727f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8eW9nYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60) center /cover fixed no-repeat, linear-gradient(to right, rgba(203, 192, 211, 1), rgba(254, 234, 250, 1));
+}
+.no-padding{
+    padding: 0;
+}
+.hero-slider .carousel-item h1{
+    font-weight: bold;
+}
+.section-title{
+    text-align: center;
+    margin-bottom: 55px;
+    font-weight: bold;
+
+}
+.about-section{
+    padding-top: 110px;
+    padding-bottom: 105px;
+
+}
+.about-section h2{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.about-section p{
+    color: #5a5b69;
+    margin-top: 15px;
+}
+.about-item{
+    margin-bottom: 30px;
+
+}
+.about-img{
+    box-shadow: 0 10px 28px 0 rgba(6, 1, 48, 0.5);
+}
+.about-item .about-icon{
+    float: left;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #7E7F9A;
+    margin-right: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 10px 12px 0 rgba(6, 1, 48, 0.5);
+}
+.about-icon i{
+    color: #7E7F9A;
+    margin: auto;
+}
+.about-item .about-text{
+    overflow: hidden;
+    padding-top: 10px;
+
+}
+.about-item .about-text h2{
+    font-weight: bold;
+    margin-bottom: 15px;
+
+}
+.about-item .about-text p{
+    font-size: 16px;
+    margin-bottom: 0;
+}
+@media (max-width:567px){
+    .about-item .about-icon{
+        float: none;
+        margin-bottom: 20px;
+
+    }
+}
+@media only screen and (min-width:768px) and (max-width:991px), only screen and (min-width:576px) and (max-width:768px), (max-width:576px){
+    .about-img{
+        text-align: center;
+        margin-bottom: 50px;
+    }
+}
+
+.section-bg{
+    background: #F7F0F5;
+}
+.services .icon-box{
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+     border-radius: 10px;
+     margin: 0 10px 40px 10px;
+     background: white;
+     box-shadow: 0 10px 28px 0 rgba(6, 1, 48, 0.5);
+     transition: all 0.3s ease-in-out;
+
+}
+.services .icon-box:hover{
+    transform: translateY(-5px);
+}
+.services .icon{
+    position: absolute;
+    left: -20px;
+    top: calc(50%-30px);
+}
+.services .icon i{
+    font-size: 58px;
+    line-height: 1;
+    transition: 0.5s;
+    padding-top: 20px;
+}
+.services .title{
+    margin-left: 40px;
+     font-weight: 600;
+     margin-bottom: 15px;
+     font-size: 18px;
+}
+.services .title a{
+    color: black;
+}
+.services .icon-box:hover .title a{
+    color: #CBC0D3;
+}
+.services .description{
+    font-size: 14px;
+    margin-left: 40px;
+     line-height: 24px;
+     margin-bottom: 0;
+
+}
+
+
+.price-item{
+    text-align: center;
+    background: white;
+    padding-bottom: 40px;
+    margin: 15px 0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 28px 0 rgba(6, 1, 48, 0.5);
+    transition: all 0.4s;
+}
+.price-item:hover{
+    box-shadow: 0 10px 28px 0 rgba(201, 182, 190, 1);
+}
+.price-item .price-top{
+    height: 156px;
+    padding-top: 26px;
+}
+.price-item .price-top h4{
+    color: #3A2E39;
+    font-size: 22px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+.price-item .price-sec{
+    width: 144px;
+    height: 144px;
+    margin: -71px auto 30px;
+    padding-top: 35px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0px 5px 6px rgba(142, 154, 175, 1);
+}
+.price-item .price-sec h3{
+    font-size: 40px;
+    font-weight: bold;
+    color: #666;
+}
+.price-item .price-sec p{
+    text-transform: uppercase;
+    color: #999;
+}
+.price-item ul{
+    list-style: none;
+    margin-bottom: 20px;
+}
+.price-item ul li{
+    justify-content: center;
+    text-align: left;
+    font-size: 14px;
+    color: #666;
+    margin: 10px;
+    padding: 0;
+    margin-left: 0;
+}
+.price-item ul li span{
+    font-weight: bold;
+}
+.price-item.beginner .price-top{
+    background-color: #CBC0D3;
+}
+.price-item.intermediate .price-top{
+    background-color: #d7cfdd;
+}
+.price-item.advanced .price-top{
+    background-color: #bfb1c9;
+}
+.price-item.pro .price-top{
+    background-color: #e4dee8;
+}
+
+.section-title{
+    text-align: center;
+     margin-bottom: 55px;
+
+}
+.faq .faq-list{
+    padding: 0 100px;
+    margin-bottom: 10px;
+}
+.faq .faq-list ul{
+    padding: 0;
+    list-style: none;
+    padding-bottom: 50px;
+}
+.faq .faq-list li{
+    padding: 20px;
+    background: white;
+    border-radius: 4px;
+    position: relative;
+}
+.faq .faq-list a{
+    display: block;
+    position: relative;
+     font-size: 16px;
+     line-height: 24px;
+     font-weight: bold;
+     padding: 0 30px;
+     outline: none;
+}
+.faq .faq-list .icon-help{
+    font-size: 20px;
+     position: absolute;
+     right: 0;
+     left: 20px;
+     color: #272838;
+}
+.faq .faq-list .icon-show, .faq .faq-list .icon-close{
+    font-size: 24px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.faq .faq-list p{
+    margin-bottom: 0;
+    padding: 10px 0 0 0;
+}
+.faq .faq-list .icon-show{
+    display: none;
+}
+.faq .faq-list a.collapsed{
+    color: #272838;
+}
+.faq .faq-list a.collapsed:hover{
+    color: #7E7F9A;
+}
+.faq .faq-list a.collapsed .icon-show{
+    display: none;
+}
+.faq .faq-list a.collapsed .icon-close{
+    display: none;
+}
+@media (max-width:1200px){
+    .faq .faq-list{
+        padding: 0;
+
+    }
+}
+.contact .info{
+    width:100%;
+}
+.contact .info i{
+    font-size: 20px;
+    float: left;
+    width:44px;
+    height:44px;
+    background: #7E7F9A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+}
+.contact .info h4{
+    padding: 0 0 0 60px;
+    font-size:18px;
+    font-weight: 500;
+    margin-bottom:5px;
+}
+.contact .info p{
+    padding: 0 0 0 60px;
+    margin-bottom:0;
+    font-size: 14px;
+    color:#000;
+}
+.contact .info .open-hours,
+.contact .info .email,
+.contact .info .phone{
+    margin-top: 40px;
+}
+.contact button{
+    background: #bfb1c9;
+    border: 2px solid #000;
+    padding:10px 35px;
+    color:#000;
+    transition: 0.4s;
+    border-radius: 50px;
+}
+.contact button:hover{
+    background: #fff;
+    border: 2px solid #000;
+}
+
+.sub-footer{
+    margin-top: 30px;
+     background: #8E9AAF;
+     border-top: 1px solid #000;
+     padding: 30px 0 10px;
+}
+footer .sub-footer p{
+    font-size: 14px;
+}
+.begin{
+color: #8E9AAF;
+}
+
+
+</style>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Yoga</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <script src="https://kit.fontawesome.com/d752769066.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+<section id="topbar" class="d-none d-lg-block">
+    <div class="container d-flex">
+        <div class="contact-info mr-auto">
+            <i class="fas fa-envelope"></i>
+            <a href="">zhakhanaruzhan@gmail.com</a>
+            <i class="fas fa-phone"></i>87713686043
+        </div>
+        <div class="social-links">
+            <a href="" class="twitter"><i class="fab fa-twitter"></i></a>
+            <a href="" class="facebook"><i class="fab fa-facebook"></i></a>
+            <a href="" class="instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+</section>
+
+<nav class="navbar navbar-expand-lg bg-color" id="myNavbar">
+    <div class="container">
+        <a href="#" class="navbar-brand"><img src="https://www.yogaeasy.de/ng-assets/images/logos/logo.png" alt=""/></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNav" aria-controls="myNav"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span></span>Menu
+        </button>
+        <div class="collapse navbar-collapse" id="myNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">Price</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">Contact</a>
+                </li>
+
+                {% if request.user.is_authenticated %}
+                <li class="last"> {{user.username}} | <a href="{% url 'logout' %}">Выйти</a></li>
+                {% else %}
+                <li class="last"><a class="begin" href="{% url 'register' %}">Регистрация</a> | <a class="begin" href="{% url 'login' %}">Войти</a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col no-padding">
+            <div id="hero-slider" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item slide-1 active">
+                        <div class="carousel-caption mb-5 text-right">
+                            <h1 class="display-4 text-uppercase mb-2 text-bold"
+                                style="font-size: 20px; justify-content: end;">
+                                Practice At Home With the World’s Top Yoga Teachers
+                            </h1>
+                            <a href="" class="btn btn-lg mb-5 text-uppercase site-btn sb-gradient">Join us</a
+                            >
+                        </div>
+                    </div>
+                    <div class="carousel-item slide-2">
+                        <div class="carousel-caption mb-5 text-right">
+                            <h1 class="display-4 text-uppercase text-bold" style="font-size: 20px;">
+                                Your free trial awaits. Cancel online anytime.
+                            </h1>
+                            <a
+                                    href=""
+                                    class="btn btn-lg mb-5 text-uppercase site-btn sb-gradient"
+                            >Your home for online yoga</a
+                            >
+                        </div>
+                    </div>
+                    <div class="carousel-item slide-3">
+                        <div class="carousel-caption mb-5 text-right">
+                            <h1 class="display-4 text-uppercase mb-2 text-bold" style="font-size: 20px;">
+                                YOUR PRACTICE, REIMAGINED
+                            </h1>
+                            <a
+                                    href=""
+                                    class="btn btn-lg mb-5 text-uppercase site-btn sb-gradient"
+                            >START YOUR FREE TRIAL</a
+                            >
+                        </div>
+                    </div>
+                </div>
+                <a
+                        href="#hero-slider"
+                        class="carousel-control-prev"
+                        role="button"
+                        data-slide="prev"
+                >
+                    <i class="fas fa-arrow-circle-left"> </i>
+                </a>
+                <a href="#hero-slider" class="carousel-control-next" role="button" data-slide="next">
+                    <i class="fas fa-arrow-circle-right"> </i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="about-section">
+    <div class="container">
+        <div class="section-title text-center">
+            <h2>Welcome to Yoga</h2>
+            <p>
+                Connect and study with 500+ expert teachers across yoga therapy, anatomy, meditation, and more. The
+                world's most diverse yoga site
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="about-img">
+                    <img src="https://images.pexels.com/photos/3759659/pexels-photo-3759659.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                         class="img-fluid" alt=""/>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about-item">
+                    <div class="about-icon">
+                        <i class="fab fa-diaspora fa-2x"></i>
+                    </div>
+                    <div class="about-text">
+                        <h4>Welcome to Yoga</h4>
+                        <p>
+                            Yoga encourages increased body awareness while also improving strength, flexibility and
+                            balance.
+                        </p>
+                    </div>
+                </div>
+                <div class="about-item">
+                    <div class="about-icon">
+                        <i class="fab fa-diaspora fa-2x"></i>
+                    </div>
+                    <div class="about-text">
+                        <h4>How to do yoga?</h4>
+                        <p>
+                            Give it a try and over time you will notice that yoga helps you to become more flexible.
+                        </p>
+                    </div>
+                </div>
+                <div class="about-item">
+                    <div class="about-icon">
+                        <i class="fab fa-diaspora fa-2x"></i>
+                    </div>
+                    <div class="about-text">
+                        <h4>I'm not flexible </h4>
+                        <p>
+                            Listen to your body, don't force yourself and stay within your limits.
+                        </p>
+                    </div>
+                </div>
+                <a href="" class="site-btn sb-gradient mt-3" style="text-decoration: none">Explore More</a
+                >
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="services section-bg pt-5">
+    <div class="container">
+        <div class="section-title">
+            <h2>Services</h2>
+            <p>
+                YogaEasy is your personal online yoga studio for at home or on the go. With YogaEasy you can practice
+                yoga comfortably - whenever and wherever you want.
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="icon-box">
+                    <div class="icon">
+                        <i class="fas fa-cannabis" style="color: #bb4430"></i>
+                    </div>
+                    <h4 class="title">
+                        <a href="">Articles</a>
+                    </h4>
+                    <p class="description">
+                        On wellbeing, anatomy, philosophy and more
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="icon-box">
+                    <div class="icon">
+                        <i class="fab fa-d-and-d" style="color: #3A2E39"></i>
+                    </div>
+                    <h4 class="title">
+                        <a href="">Sequences</a>
+                    </h4>
+                    <p class="description">
+                        Inspiration for your practice or teaching
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="icon-box">
+                    <div class="icon">
+                        <i class="fab fa-envira" style="color: #006BA6"></i>
+                    </div>
+                    <h4 class="title">
+                        <a href="">Yoga poses</a>
+                    </h4>
+                    <p class="description">
+                        Tips on how to make poses work for you
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="icon-box">
+                    <div class="icon">
+                        <i class="fas fa-feather-alt" style="color: #000022"></i>
+                    </div>
+                    <h4 class="title">
+                        <a href="">Styles</a>
+                    </h4>
+                    <p class="description">
+                        Quick guides to all our yoga styles
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="icon-box">
+                    <div class="icon">
+                        <i class="fas fa-leaf" style="color: #C42847"></i>
+                    </div>
+                    <h4 class="title">
+                        <a href="">Yin yoga poses</a>
+                    </h4>
+                    <p class="description">
+                        Step-by-step guides to yin yoga poses
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="icon-box">
+                    <div class="icon">
+                        <i class="fas fa-life-ring" style="color: #433633"></i>
+                    </div>
+                    <h4 class="title">
+                        <a href="">Dictionary</a>
+                    </h4>
+                    <p class="description">
+                        A glossary of terms you might hear in class.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+<section class="pricing-section pt-5">
+    <div class="container">
+        <div class="section-title text-center">
+            <h2>Price</h2>
+            <p>Do not economy on yourself!</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-sm-6">
+                <div class="price-item beginner">
+                    <div class="price-top">
+                        <h4>Beginner</h4>
+                    </div>
+                    <div class="price-sec">
+                        <h3>$69</h3>
+                        <p>Per month</p>
+                    </div>
+                    <ul>
+                        <li><span>What you need:</span> A block</li>
+                        <li><span>Flow speed:</span> Slow to medium</li>
+                        <li><span>Sweat factor:</span> Medium. Some of those faster classes can get dewy.</li>
+                        <li><span>Zen factor:</span> High. Those white spaces are visual Xanax.</li>
+                    </ul>
+                    <a href="" class="site-btn sb-gradient">Get started</a>
+
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="price-item intermediate">
+                    <div class="price-top">
+                        <h4>Intermediate</h4>
+                    </div>
+                    <div class="price-sec">
+                        <h3>$89</h3>
+                        <p>Per month</p>
+                    </div>
+                    <ul>
+                        <li><span>What you need:</span> Towel, mat, and water</li>
+                        <li><span>Flow speed:</span> Fast for Vinyasa, medium for Slow Burn</li>
+                        <li><span>Sweat factor:</span> High, even in shorter videos</li>
+                        <li><span>Zen factor:</span> Major. Flowing to Beyoncé is good for the soul.</li>
+                    </ul>
+                    <a href="" class="site-btn sb-gradient">Get started</a>
+
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="price-item advanced">
+                    <div class="price-top">
+                        <h4>Advanced</h4>
+                    </div>
+                    <div class="price-sec">
+                        <h3>$109</h3>
+                        <p>Per month</p>
+                    </div>
+                    <ul>
+                        <li><span>What you need:</span> A block</li>
+                        <li><span>Flow speed:</span> Medium. You won’t get lost in the flow, nor will you be hanging out
+                            in plank so long that you want to give up.
+                        </li>
+                        <li><span>Sweat level:</span> Low</li>
+                        <li><span>Zen factor:</span> More than any other studio, Modo focuses on the mind-body
+                            connection.
+                        </li>
+                    </ul>
+                    <a href="" class="site-btn sb-gradient">Get started</a>
+
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="price-item pro">
+                    <div class="price-top">
+                        <h4>Pro</h4>
+                    </div>
+                    <div class="price-sec">
+                        <h3>$129</h3>
+                        <p>Per month</p>
+                    </div>
+                    <ul>
+                        <li><span>What you need:</span> Two blocks, a blanket or towel, and, sometimes, a chair or sofa
+                        </li>
+                        <li><span>Flow speed:</span> Slow to medium; you’ll get the gist quickly, and the transitions
+                            are intuitive.
+                        </li>
+                        <li><span>Sweat level:</span> Medium</li>
+                        <li><span>Zen factor:</span> Blissfully high</li>
+                    </ul>
+                    <a href="" class="site-btn sb-gradient">Get started</a>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="gallery">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center pt-5">
+                <h1 class="text-dark text-uppercase">
+                    Our Gallery
+                </h1>
+            </div>
+        </div>
+        <div class="row mb-4 first-row align-items-end">
+            <div class="col-lg-3">
+                <a href="https://images.pexels.com/photos/3150250/pexels-photo-3150250.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                   data-lightbox="yoga" data-title="image-title">
+                    <img src="https://images.pexels.com/photos/3150250/pexels-photo-3150250.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                         class="img-thumbnail gallery"></a>
+            </div>
+            <div class="col-lg-3">
+                <a href="https://images.pexels.com/photos/617000/pexels-photo-617000.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                   data-lightbox="yoga" data-title="image-title">
+                    <img src="https://images.pexels.com/photos/617000/pexels-photo-617000.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                         class="img-thumbnail gallery"></a>
+            </div>
+            <div class="col-lg-3">
+                <a href="https://images.pexels.com/photos/3822304/pexels-photo-3822304.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                   data-lightbox="yoga" data-title="image-title">
+                    <img src="https://images.pexels.com/photos/3822304/pexels-photo-3822304.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                         class="img-thumbnail gallery"></a>
+            </div>
+            <div class="col-lg-3">
+                <a href="https://images.pexels.com/photos/3823117/pexels-photo-3823117.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                   data-lightbox="yoga" data-title="image-title">
+                    <img src="https://images.pexels.com/photos/3823117/pexels-photo-3823117.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                         class="img-thumbnail gallery"></a>
+            </div>
+        </div>
+        <div class="row mb-4 second-row align-items-end">
+            <div class="col-lg-3">
+                <a href="https://images.pexels.com/photos/4662344/pexels-photo-4662344.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                   data-lightbox="yoga" data-title="image-title">
+                    <img src="https://images.pexels.com/photos/4662344/pexels-photo-4662344.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                         class="img-thumbnail gallery" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3">
+                <a href="https://images.pexels.com/photos/1375883/pexels-photo-1375883.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                   data-lightbox="yoga" data-title="image-title">
+                    <img src="https://images.pexels.com/photos/1375883/pexels-photo-1375883.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                         class="img-thumbnail gallery" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3">
+                <a href="https://images.pexels.com/photos/373933/pexels-photo-373933.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                   data-lightbox="yoga" data-title="image-title">
+                    <img src="https://images.pexels.com/photos/373933/pexels-photo-373933.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                         class="img-thumbnail gallery" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3">
+                <a href="https://images.pexels.com/photos/3823076/pexels-photo-3823076.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                   data-lightbox="yoga" data-title="image-title">
+                    <img src="https://images.pexels.com/photos/3823076/pexels-photo-3823076.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                         class="img-thumbnail gallery" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="faq section-bg pt-5" id="faq">
+    <div class="container">
+        <div class="section-title">
+            <h2>F.A.Q</h2>
+            <p>You can get answers to frequently asked questions here</p>
+        </div>
+        <div class="faq-list">
+            <ul>
+                <li>
+                    <i href="" class="fas fa-align-justify icon-help"></i>
+                    <a href="#faq-list-1" data-toggle="collapse" class="collapsed">What is yoga?
+                        <i class="fas fa-chevron-down icon-show"></i>
+                        <i class="fas fa-chevron-up icon-close"></i>
+                    </a>
+                    <div class="collapse show" id="faq-list-1" data-parent=".faq-list">
+                        <p>Yoga is the connection of the body, mind and breath through a series of guided poses and
+                            sequences. Yoga encourages increased body awareness while also improving strength,
+                            flexibility and balance. There are many
+                            types of yoga, each with different focuses and benefits, however most revolve around the
+                            central idea of connecting the body, mind and breath.</p>
+                    </div>
+                </li>
+                <li>
+                    <i href="" class="fas fa-align-justify icon-help"></i>
+                    <a href="#faq-list-2" data-toggle="collapse" class="collapsed">What equipment do you need for yoga?
+                        <i class="fas fa-chevron-down icon-show"></i>
+                        <i class="fas fa-chevron-up icon-close"></i>
+                    </a>
+                    <div class="collapse show" id="faq-list-2" data-parent=".faq-list">
+                        <p>The equipment you will need for yoga includes a yoga mat, appropriate yoga clothing, and a
+                            water bottle. There is some extra yoga equipment that you could also consider including a
+                            yoga mat bag, a yoga towel, a
+                            yoga strap, a yoga block or brick, and a yoga blanket.</p>
+                    </div>
+                </li>
+                <li>
+                    <i href="" class="fas fa-align-justify icon-help"></i>
+                    <a href="#faq-list-3" data-toggle="collapse" class="collapsed">What should you wear to yoga?
+                        <i class="fas fa-chevron-down icon-show"></i>
+                        <i class="fas fa-chevron-up icon-close"></i>
+                    </a>
+                    <div class="collapse show" id="faq-list-3" data-parent=".faq-list">
+                        <p>You should wear any nonrestrictive clothing to yoga. This can include specific yoga tops,
+                            yoga leggings, a sports bra, shorts, etc. Really, wear anything that allows you to move
+                            freely and feel comfortable.</p>
+                    </div>
+                </li>
+                <li>
+                    <i href="" class="fas fa-align-justify icon-help"></i>
+                    <a href="#faq-list-4" data-toggle="collapse" class="collapsed">What is the best time to practice
+                        yoga?
+                        <i class="fas fa-chevron-down icon-show"></i>
+                        <i class="fas fa-chevron-up icon-close"></i>
+                    </a>
+                    <div class="collapse show" id="faq-list-4" data-parent=".faq-list">
+                        <p>The best time to practice yoga is in the morning or early evening, around sunset. This is not
+                            universally true though; you should practice yoga what it feels right for your body’s
+                            needs.</p>
+                    </div>
+                </li>
+                <li>
+                    <i href="" class="fas fa-align-justify icon-help"></i>
+                    <a href="#faq-list-5" data-toggle="collapse" class="collapsed">How do I get to the courses I am
+                        attending?
+                        <i class="fas fa-chevron-down icon-show"></i>
+                        <i class="fas fa-chevron-up icon-close"></i>
+                    </a>
+                    <div class="collapse show" id="faq-list-5" data-parent=".faq-list">
+                        <p>After you have registered for a course, you can reach it via the link to your account
+                            above.</p>
+                    </div>
+                </li>
+                <li>
+                    <i href="" class="fas fa-align-justify icon-help"></i>
+                    <a href="#faq-list-6" data-toggle="collapse" class="collapsed">Who teaches the courses?
+                        <i class="fas fa-chevron-down icon-show"></i>
+                        <i class="fas fa-chevron-up icon-close"></i>
+                    </a>
+                    <div class="collapse show" id="faq-list-6" data-parent=".faq-list">
+                        <p>Our courses are taught by hand-picked representatives of the YogaEasy teacher team: Highly
+                            renowned yoga teachers whose (live) training has been setting standards on the German yoga
+                            market for years and who are
+                            in great demand for this reason. </p>
+                    </div>
+                </li>
+                <li>
+                    <i href="" class="fas fa-align-justify icon-help"></i>
+                    <a href="#faq-list-7" data-toggle="collapse" class="collapsed">What does a course include?
+                        <i class="fas fa-chevron-down icon-show"></i>
+                        <i class="fas fa-chevron-up icon-close"></i>
+                    </a>
+                    <div class="collapse show" id="faq-list-7" data-parent=".faq-list">
+                        <p>The courses are mostly taught through videos consisting of lectures, demonstrations and
+                            practice sessions. </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <section class="contact mt-5">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-lg-4">
+                    <div class="info">
+                        <div class="address">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h4>Location:</h4>
+                            <p>Tole Bi Street 23А, Almaty 050010</p>
+                        </div>
+                        <div class="open-hours">
+                            <i class="far fa-clock"></i>
+                            <h4>Open Hours:</h4>
+                            <p>Monday-Saturday<br> 8AM–8:30PM
+                            </p>
+                        </div>
+                        <div class="email">
+                            <i class="fas fa-envelope-open-text"></i>
+                            <h4>Email:</h4>
+                            <p>200103467@stu.sdu.edu.kz</p>
+                        </div>
+                        <div class="phone">
+                            <i class="fas fa-phone"></i>
+                            <h4>Call:</h4>
+                            <p> 8 (727) 323 1010</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 mt-5 mt-lg-0">
+                    <form method="POST" action="/contact">
+                        {% csrf_token %}
+
+                        <div class="form-row">
+                            <div class="col-md-6 form-group">
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <input type="email" class="form-control" name="email" id="email"
+                                       placeholder="Your Email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
+
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" name="message" rows="8" placeholder="Message"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <a>
+                                <button type="submit" value="Submit" name="mybutton">Send message</button>
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="sub-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 col-md-4 ">
+                    <div>
+                        <div class="text-center">
+                            <p>&copy; Copyright - YogaEasy. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
