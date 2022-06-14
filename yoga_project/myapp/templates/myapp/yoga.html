@@ -212,6 +212,13 @@
      margin-bottom: 0;
 
 }
+.services .like{
+margin-top: 10px;
+left: 40px;
+padding: 3px;
+display: flex;
+
+}
 
 
 .price-item{
@@ -407,7 +414,10 @@ footer .sub-footer p{
 .begin{
 color: #8E9AAF;
 }
-
+a{
+text-decoration: none;
+color: #CBC0D3;
+}
 
 </style>
 <!DOCTYPE html>
@@ -462,13 +472,13 @@ color: #8E9AAF;
                     <a href="" class="nav-link">Services</a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link">Price</a>
+                    <a href="{% url 'price' %}" class="nav-link">Price</a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link">Gallery</a>
+                    <a href="{% url 'faq' %}" class="nav-link">F.A.Q</a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link">Contact</a>
+                    <a href="{% url 'base' %}" class="nav-link">Contact</a>
                 </li>
 
                 {% if request.user.is_authenticated %}
@@ -588,7 +598,7 @@ color: #8E9AAF;
                         </p>
                     </div>
                 </div>
-                <a href="" class="site-btn sb-gradient mt-3" style="text-decoration: none">Explore More</a
+                <a href="{% url 'testimonial' %}" class="site-btn sb-gradient mt-3" style="text-decoration: none">Explore More</a
                 >
             </div>
         </div>
@@ -604,86 +614,42 @@ color: #8E9AAF;
                 yoga comfortably - whenever and wherever you want.
             </p>
         </div>
+
         <div class="row">
+            {% for post in posts %}
+
             <div class="col-lg-4 col-md-6">
                 <div class="icon-box">
+
                     <div class="icon">
                         <i class="fas fa-cannabis" style="color: #bb4430"></i>
                     </div>
                     <h4 class="title">
-                        <a href="">Articles</a>
+                        <a href="">{{ post.name }}</a>
                     </h4>
                     <p class="description">
-                        On wellbeing, anatomy, philosophy and more
+                        {{ post.description }}
                     </p>
+                    <form method="POST" action="{% url 'like' post.pk %}">
+                        {% csrf_token %}
+                        <button style="background-color: #bb4430" type="submit" class="like col-sm-6"><i class="fa fa-thumbs-up">
+                            <span>{{ post.likes.all.count }}</span>
+                        </i> </button>
+                    </form>
+                    <form method="POST" action="{% url 'dislike' post.pk %}">
+                        {% csrf_token %}
+                        <button style="background-color: #bb4430" type="submit" class="like col-sm-6"><i class="fa fa-thumbs-down">
+                            <span>{{ post.dislike.all.count }}</span>
+                        </i> </button>
+                    </form>
+
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="icon-box">
-                    <div class="icon">
-                        <i class="fab fa-d-and-d" style="color: #3A2E39"></i>
-                    </div>
-                    <h4 class="title">
-                        <a href="">Sequences</a>
-                    </h4>
-                    <p class="description">
-                        Inspiration for your practice or teaching
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="icon-box">
-                    <div class="icon">
-                        <i class="fab fa-envira" style="color: #006BA6"></i>
-                    </div>
-                    <h4 class="title">
-                        <a href="">Yoga poses</a>
-                    </h4>
-                    <p class="description">
-                        Tips on how to make poses work for you
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="icon-box">
-                    <div class="icon">
-                        <i class="fas fa-feather-alt" style="color: #000022"></i>
-                    </div>
-                    <h4 class="title">
-                        <a href="">Styles</a>
-                    </h4>
-                    <p class="description">
-                        Quick guides to all our yoga styles
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="icon-box">
-                    <div class="icon">
-                        <i class="fas fa-leaf" style="color: #C42847"></i>
-                    </div>
-                    <h4 class="title">
-                        <a href="">Yin yoga poses</a>
-                    </h4>
-                    <p class="description">
-                        Step-by-step guides to yin yoga poses
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="icon-box">
-                    <div class="icon">
-                        <i class="fas fa-life-ring" style="color: #433633"></i>
-                    </div>
-                    <h4 class="title">
-                        <a href="">Dictionary</a>
-                    </h4>
-                    <p class="description">
-                        A glossary of terms you might hear in class.
-                    </p>
-                </div>
-            </div>
+
+            {% endfor %}
         </div>
+
+
     </div>
 
 
@@ -695,6 +661,7 @@ color: #8E9AAF;
             <h2>Price</h2>
             <p>Do not economy on yourself!</p>
         </div>
+
         <div class="row">
             <div class="col-lg-3 col-sm-6">
                 <div class="price-item beginner">
@@ -711,7 +678,7 @@ color: #8E9AAF;
                         <li><span>Sweat factor:</span> Medium. Some of those faster classes can get dewy.</li>
                         <li><span>Zen factor:</span> High. Those white spaces are visual Xanax.</li>
                     </ul>
-                    <a href="" class="site-btn sb-gradient">Get started</a>
+                    <a href="{% url 'payment' %}" class="site-btn sb-gradient">Get started</a>
 
                 </div>
             </div>
@@ -730,7 +697,7 @@ color: #8E9AAF;
                         <li><span>Sweat factor:</span> High, even in shorter videos</li>
                         <li><span>Zen factor:</span> Major. Flowing to Beyoncé is good for the soul.</li>
                     </ul>
-                    <a href="" class="site-btn sb-gradient">Get started</a>
+                    <a href="{% url 'payment' %}" class="site-btn sb-gradient">Get started</a>
 
                 </div>
             </div>
@@ -753,7 +720,7 @@ color: #8E9AAF;
                             connection.
                         </li>
                     </ul>
-                    <a href="" class="site-btn sb-gradient">Get started</a>
+                    <a href="{% url 'payment' %}" class="site-btn sb-gradient">Get started</a>
 
                 </div>
             </div>
@@ -775,7 +742,7 @@ color: #8E9AAF;
                         <li><span>Sweat level:</span> Medium</li>
                         <li><span>Zen factor:</span> Blissfully high</li>
                     </ul>
-                    <a href="" class="site-btn sb-gradient">Get started</a>
+                    <a href="{% url 'payment' %}" class="site-btn sb-gradient">Get started</a>
 
                 </div>
             </div>

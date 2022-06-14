@@ -1,0 +1,112 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block content %}
+<head>
+
+    <!--===============================================================================================-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+     <link rel="stylesheet" href="{% static 'css/faq.css' %}">
+
+</head>
+<section class="faq section-bg pt-5" id="faq">
+    <div class="container">
+        <div class="section-title">
+            <h2>F.A.Q</h2>
+            <p>You can get answers to frequently asked questions here</p>
+        </div>
+        <div class="faq-list">
+            <ul>
+                <li>
+                    <i href="" class="fas fa-align-justify icon-help"></i>
+                    <a href="#faq-list-1" data-toggle="collapse" class="collapsed">What is yoga?
+                        <i class="fas fa-chevron-down icon-show"></i>
+                        <i class="fas fa-chevron-up icon-close"></i>
+                    </a>
+                    <div class="collapse show" id="faq-list-1" data-parent=".faq-list">
+                        <p>Yoga is the connection of the body, mind and breath through a series of guided poses and
+                            sequences. Yoga encourages increased body awareness while also improving strength,
+                            flexibility and balance. There are many
+                            types of yoga, each with different focuses and benefits, however most revolve around the
+                            central idea of connecting the body, mind and breath.</p>
+                    </div>
+                </li>
+                <li>
+                    <i href="" class="fas fa-align-justify icon-help"></i>
+                    <a href="#faq-list-2" data-toggle="collapse" class="collapsed">What equipment do you need for yoga?
+                        <i class="fas fa-chevron-down icon-show"></i>
+                        <i class="fas fa-chevron-up icon-close"></i>
+                    </a>
+                    <div class="collapse show" id="faq-list-2" data-parent=".faq-list">
+                        <p>The equipment you will need for yoga includes a yoga mat, appropriate yoga clothing, and a
+                            water bottle. There is some extra yoga equipment that you could also consider including a
+                            yoga mat bag, a yoga towel, a
+                            yoga strap, a yoga block or brick, and a yoga blanket.</p>
+                    </div>
+                </li>
+                <li>
+                    <i href="" class="fas fa-align-justify icon-help"></i>
+                    <a href="#faq-list-3" data-toggle="collapse" class="collapsed">What should you wear to yoga?
+                        <i class="fas fa-chevron-down icon-show"></i>
+                        <i class="fas fa-chevron-up icon-close"></i>
+                    </a>
+                    <div class="collapse show" id="faq-list-3" data-parent=".faq-list">
+                        <p>You should wear any nonrestrictive clothing to yoga. This can include specific yoga tops,
+                            yoga leggings, a sports bra, shorts, etc. Really, wear anything that allows you to move
+                            freely and feel comfortable.</p>
+                    </div>
+                </li>
+                <li>
+                    <i href="" class="fas fa-align-justify icon-help"></i>
+                    <a href="#faq-list-4" data-toggle="collapse" class="collapsed">What is the best time to practice
+                        yoga?
+                        <i class="fas fa-chevron-down icon-show"></i>
+                        <i class="fas fa-chevron-up icon-close"></i>
+                    </a>
+                    <div class="collapse show" id="faq-list-4" data-parent=".faq-list">
+                        <p>The best time to practice yoga is in the morning or early evening, around sunset. This is not
+                            universally true though; you should practice yoga what it feels right for your body’s
+                            needs.</p>
+                    </div>
+                </li>
+                <li>
+                    <i href="" class="fas fa-align-justify icon-help"></i>
+                    <a href="#faq-list-5" data-toggle="collapse" class="collapsed">How do I get to the courses I am
+                        attending?
+                        <i class="fas fa-chevron-down icon-show"></i>
+                        <i class="fas fa-chevron-up icon-close"></i>
+                    </a>
+                    <div class="collapse show" id="faq-list-5" data-parent=".faq-list">
+                        <p>After you have registered for a course, you can reach it via the link to your account
+                            above.</p>
+                    </div>
+                </li>
+                <li>
+                    <i href="" class="fas fa-align-justify icon-help"></i>
+                    <a href="#faq-list-6" data-toggle="collapse" class="collapsed">Who teaches the courses?
+                        <i class="fas fa-chevron-down icon-show"></i>
+                        <i class="fas fa-chevron-up icon-close"></i>
+                    </a>
+                    <div class="collapse show" id="faq-list-6" data-parent=".faq-list">
+                        <p>Our courses are taught by hand-picked representatives of the YogaEasy teacher team: Highly
+                            renowned yoga teachers whose (live) training has been setting standards on the German yoga
+                            market for years and who are
+                            in great demand for this reason. </p>
+                    </div>
+                </li>
+                <li>
+                    <i href="" class="fas fa-align-justify icon-help"></i>
+                    <a href="#faq-list-7" data-toggle="collapse" class="collapsed">What does a course include?
+                        <i class="fas fa-chevron-down icon-show"></i>
+                        <i class="fas fa-chevron-up icon-close"></i>
+                    </a>
+                    <div class="collapse show" id="faq-list-7" data-parent=".faq-list">
+                        <p>The courses are mostly taught through videos consisting of lectures, demonstrations and
+                            practice sessions. </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,103 @@
+.price-item{
+    text-align: center;
+    background: white;
+    padding-bottom: 40px;
+    margin: 15px 0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 28px 0 rgba(6, 1, 48, 0.5);
+    transition: all 0.4s;
+
+}
+.price-item:hover{
+    box-shadow: 0 10px 28px 0 rgba(201, 182, 190, 1);
+}
+.price-item .price-top{
+    height: 156px;
+    padding-top: 26px;
+}
+.price-item .price-top h4{
+    color: #3A2E39;
+    font-size: 22px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+.price-item .price-sec{
+    width: 144px;
+    height: 144px;
+    margin: -71px auto 30px;
+    padding-top: 35px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0px 5px 6px rgba(142, 154, 175, 1);
+}
+
+.price-item .price-sec h3{
+    font-size: 40px;
+    font-weight: bold;
+    color: #666;
+}
+.price-item .price-sec p{
+    text-transform: uppercase;
+    color: #999;
+}
+.price-item ul{
+    list-style: none;
+    margin-bottom: 20px;
+}
+.price-item ul li{
+    justify-content: center;
+    text-align: left;
+    font-size: 14px;
+    color: #666;
+    margin: 10px;
+    padding: 0;
+    margin-left: 0;
+}
+.price-item ul li span{
+    font-weight: bold;
+}
+.price-item.beginner .price-top{
+    background-color: #CBC0D3;
+}
+.price-item.intermediate .price-top{
+    background-color: #d7cfdd;
+}
+.price-item.advanced .price-top{
+    background-color: #bfb1c9;
+}
+.price-item.pro .price-top{
+    background-color: #e4dee8;
+}
+
+.section-title{
+    text-align: center;
+     margin-bottom: 55px;
+
+}
+.site-btn{
+    display: inline-block;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    min-width: 167px;
+    padding: 14px 30px;
+    border-radius: 50px;
+    color: white;
+    line-height: normal;
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: 1px;
+    background: linear-gradient(to right, #bf9bda, #DEE2FF);
+}
+
+.site-btn.sb-gradient{
+    color: white;
+    padding: 13px 29px;
+    position: relative;
+    transition: all 0.4s;
+    z-index: 1;
+}
+.site-btn.sb-gradient:hover{
+    color: #272838;
+}

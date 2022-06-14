@@ -1,0 +1,70 @@
+.faq .faq-list{
+    padding: 0 100px;
+    margin-bottom: 10px;
+}
+.faq .faq-list ul{
+    padding: 0;
+    list-style: none;
+    padding-bottom: 50px;
+}
+.faq .faq-list li{
+    padding: 20px;
+    background: white;
+    border-radius: 4px;
+    position: relative;
+}
+.faq .faq-list a{
+    display: block;
+    position: relative;
+     font-size: 16px;
+     line-height: 24px;
+     font-weight: bold;
+     padding: 0 30px;
+     outline: none;
+}
+.faq .faq-list .icon-help{
+    font-size: 20px;
+     position: absolute;
+     right: 0;
+     left: 20px;
+     color: #272838;
+}
+.faq .faq-list .icon-show, .faq .faq-list .icon-close{
+    font-size: 24px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.faq .faq-list p{
+    margin-bottom: 0;
+    padding: 10px 0 0 0;
+}
+.faq .faq-list .icon-show{
+    display: none;
+}
+.faq .faq-list a.collapsed{
+    color: #272838;
+}
+.faq .faq-list a.collapsed:hover{
+    color: #7E7F9A;
+}
+.faq .faq-list a.collapsed .icon-show{
+    display: none;
+}
+.faq .faq-list a.collapsed .icon-close{
+    display: none;
+}
+@media (max-width:1200px){
+    .faq .faq-list{
+        padding: 0;
+
+    }
+}
+.section-title{
+    text-align: center;
+     margin-bottom: 55px;
+
+}
+.section-bg{
+    background: #F7F0F5;
+}

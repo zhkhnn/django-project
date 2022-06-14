@@ -1,0 +1,62 @@
+* {
+ margin: 0px;
+ padding: 0px;
+ box-sizing: border-box;
+}
+body, html {
+height: 100%;
+font-family: Ubuntu-Regular, sans-serif;
+}
+.register{
+  margin-left:200px;
+  margin-top: 50px;
+  font-size: 24px;
+  color: #3A2E39;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  justify-content: center;
+  }
+  h1{
+  margin-left: 200px;
+  margin-top: 40px;
+  text-align: center;
+  justify-content: center;
+
+  }
+  button{
+  margin-top: 20px;
+  width: 180px;
+  height: 50px;
+  position: absolute;
+  background-color: #3A2E39;
+  color: #CBC0D3;
+  border-radius: 20px;
+  justify-content: center;
+
+  }
+  .site-btn{
+    display: inline-block;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    min-width: 167px;
+    padding: 14px 30px;
+    border-radius: 50px;
+    color: white;
+    line-height: normal;
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: 1px;
+    background: linear-gradient(to right, #bf9bda, #DEE2FF);
+}
+
+.site-btn.sb-gradient{
+    color: white;
+    padding: 13px 29px;
+    position: relative;
+    transition: all 0.4s;
+    z-index: 1;
+}
+.site-btn.sb-gradient:hover{
+    color: #272838;
+}

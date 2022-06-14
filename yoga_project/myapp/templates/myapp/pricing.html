@@ -1,0 +1,118 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block content %}
+<head>
+
+    <!--===============================================================================================-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+     <link rel="stylesheet" href="{% static 'css/pricing.css' %}">
+
+</head>
+
+<section class="pricing-section pt-5">
+    <div class="container">
+        <div class="section-title text-center">
+            <h2>Price</h2>
+            <p>Do not economy on yourself!</p>
+        </div>
+
+        <div class="row">
+            {% for m in material %}
+            <div class="col-lg-3 d-flex justify-content-center">
+
+                <div class="price-item beginner">
+
+                    <div class="price-top">
+
+                        <h4>{{m.name}}</h4>
+                    </div>
+                    <div class="price-sec">
+                        <h3>$ {{m.price}}</h3>
+                        <p>Per month</p>
+                    </div>
+                    <ul>
+                        <li><span>What you need:</span> {{m.what_you_need}}</li>
+                        <li><span>Flow speed:</span> {{m.flow_speed}}</li>
+                        <li><span>Sweat factor:</span> {{m.sweat_factor}}</li>
+                        <li><span>Zen factor:</span> {{m.zen_factor}}</li>
+                    </ul>
+
+
+                    <a href="{% url 'payment' %}" class="site-btn sb-gradient">Get started</a>
+
+
+
+                </div>
+
+            </div>
+            {% endfor %}
+<!--            <div class="col-lg-3 col-sm-6">-->
+<!--                <div class="price-item intermediate">-->
+<!--                    <div class="price-top">-->
+<!--                        <h4>Intermediate</h4>-->
+<!--                    </div>-->
+<!--                    <div class="price-sec">-->
+<!--                        <h3>$89</h3>-->
+<!--                        <p>Per month</p>-->
+<!--                    </div>-->
+<!--                    <ul>-->
+<!--                        <li><span>What you need:</span> Towel, mat, and water</li>-->
+<!--                        <li><span>Flow speed:</span> Fast for Vinyasa, medium for Slow Burn</li>-->
+<!--                        <li><span>Sweat factor:</span> High, even in shorter videos</li>-->
+<!--                        <li><span>Zen factor:</span> Major. Flowing to Beyoncé is good for the soul.</li>-->
+<!--                    </ul>-->
+<!--                    <a href="{% url 'payment' %}" class="site-btn sb-gradient">Get started</a>-->
+
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-lg-3 col-sm-6">-->
+<!--                <div class="price-item advanced">-->
+<!--                    <div class="price-top">-->
+<!--                        <h4>Advanced</h4>-->
+<!--                    </div>-->
+<!--                    <div class="price-sec">-->
+<!--                        <h3>$109</h3>-->
+<!--                        <p>Per month</p>-->
+<!--                    </div>-->
+<!--                    <ul>-->
+<!--                        <li><span>What you need:</span> A block</li>-->
+<!--                        <li><span>Flow speed:</span> Medium. You won’t get lost in the flow, nor will you be hanging out-->
+<!--                            in plank so long that you want to give up.-->
+<!--                        </li>-->
+<!--                        <li><span>Sweat level:</span> Low</li>-->
+<!--                        <li><span>Zen factor:</span> More than any other studio, Modo focuses on the mind-body-->
+<!--                            connection.-->
+<!--                        </li>-->
+<!--                    </ul>-->
+<!--                    <a href="{% url 'payment' %}" class="site-btn sb-gradient">Get started</a>-->
+
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-lg-3 col-sm-6">-->
+<!--                <div class="price-item pro">-->
+<!--                    <div class="price-top">-->
+<!--                        <h4>Pro</h4>-->
+<!--                    </div>-->
+<!--                    <div class="price-sec">-->
+<!--                        <h3>$129</h3>-->
+<!--                        <p>Per month</p>-->
+<!--                    </div>-->
+<!--                    <ul>-->
+<!--                        <li><span>What you need:</span> Two blocks, a blanket or towel, and, sometimes, a chair or sofa-->
+<!--                        </li>-->
+<!--                        <li><span>Flow speed:</span> Slow to medium; you’ll get the gist quickly, and the transitions-->
+<!--                            are intuitive.-->
+<!--                        </li>-->
+<!--                        <li><span>Sweat level:</span> Medium</li>-->
+<!--                        <li><span>Zen factor:</span> Blissfully high</li>-->
+<!--                    </ul>-->
+<!--                    <a href="{% url 'payment' %}" class="site-btn sb-gradient">Get started</a>-->
+
+<!--                </div>-->
+<!--            </div>-->
+
+        </div>
+
+    </div>
+</section>
+{% endblock %}
